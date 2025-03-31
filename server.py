@@ -302,8 +302,8 @@ def extract_parameters(matched_ques_id, question):
 
 
 
-
 @app.post("/api")
+@app.post("/api/")
 async def api(question: Annotated[str, Form()], file: List[UploadFile] | None = None):
     if file:
         temp_dir = tempfile.mkdtemp()
